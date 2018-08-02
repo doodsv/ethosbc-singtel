@@ -1,23 +1,23 @@
 package ethosbc.com.example;
 
 import ethosbc.com.example.interfaces.IAnimalBehavior;
-import ethosbc.com.example.interfaces.IBirdBehavior;
+import ethosbc.com.example.interfaces.IParrotBehavior;
 
-public class Duck extends Bird implements IAnimalBehavior, IBirdBehavior {
+public class Duck extends Bird implements IAnimalBehavior, IParrotBehavior {
 
-	@Override
-	public boolean doAction(String action) {
-		boolean ret = false;
-		if (null != action && !action.isEmpty()) {
-			System.out.println(action);
-			ret = true;
-		}
-		return ret;
+	private String palmateFeetColor;
+
+	public String getPalmateFeetColor() {
+		return palmateFeetColor;
+	}
+
+	public void setPalmateFeetColor(String color) {
+		this.palmateFeetColor = color;
 	}
 
 	@Override
 	public void makeSound() {
-		System.out.println("Quack, quack");
+        System.out.println("Quack, quack");
 	}
 
 	@Override

@@ -1,18 +1,9 @@
 package ethosbc.com.example;
 
 import ethosbc.com.example.interfaces.IAnimalBehavior;
+import ethosbc.com.example.interfaces.ISharkBehavior;
 
-public class Bird extends Animal implements IAnimalBehavior {
-
-	private int wingSpan;
-
-	public int getWingSpan() {
-		return wingSpan;
-	}
-
-	public void setWingspan(int wingspan) {
-		this.wingSpan = wingspan;
-	}
+public class Shark extends Fish implements IAnimalBehavior, ISharkBehavior {
 
 	@Override
 	public boolean doAction(String action) {
@@ -28,5 +19,11 @@ public class Bird extends Animal implements IAnimalBehavior {
 	public void feed() {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public boolean feed(Animal prey) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 }

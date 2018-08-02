@@ -1,29 +1,29 @@
 package ethosbc.com.example;
 
 import ethosbc.com.example.interfaces.IAnimalBehavior;
-import ethosbc.com.example.interfaces.IBirdBehavior;
+import ethosbc.com.example.interfaces.IParrotBehavior;
 
-public class Chicken extends Bird implements IAnimalBehavior, IBirdBehavior {
+public class Chicken extends Bird implements IAnimalBehavior, IParrotBehavior {
 
-	@Override
-	public boolean doAction(String action) {
-		boolean ret = false;
-		if (null != action && !action.isEmpty()) {
-			System.out.println(action);
-			ret = true;
-		}
-		return ret;
+	private int combLength;
+
+	public int getCombLength() {
+		return combLength;
 	}
 
 	@Override
 	public void makeSound() {
-		System.out.println("Cluck, cluck");
+        System.out.println("Cluck, cluck");
 	}
 
 	@Override
 	public boolean makeSound(String sound) {
-		// TODO Auto-generated method stub
-		return false;
+        boolean ret = false;
+        if (null != sound && !sound.isEmpty()) {
+            System.out.println(sound);
+            ret = true;
+        }
+        return ret;
 	}
 
 	@Override
