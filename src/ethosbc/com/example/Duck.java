@@ -25,4 +25,10 @@ public class Duck extends Bird implements IAnimalBehavior, IBirdBehavior {
 		// TODO Auto-generated method stub
 		return false;
 	}
+
+	@Override
+	public boolean makeSound(Animal companion) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }

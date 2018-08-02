@@ -16,5 +16,18 @@ public class BirdRunner {
 		Chicken rooster = new Chicken();
 		rooster.setGender("Male");
 		rooster.makeSound("Cock-a-doodle-doo");
+		
+		Parrot parrot1 = new Parrot();
+		parrot1.setCompanion(new Dog());
+		parrot1.makeSound( parrot1.getCompanion() );
+		
+		Parrot parrot2 = new Parrot();
+		parrot2.setCompanion(new Cat());
+		parrot2.makeSound( parrot2.getCompanion() );
+		
+		Parrot parrot3 = new Parrot();
+		parrot3.setCompanion(new Chicken());
+		parrot3.makeSound( parrot3.getCompanion() );
+		
 	}
 }
