@@ -19,4 +19,10 @@ public class Duck extends Bird implements IAnimalBehavior, IBirdBehavior {
 	public void makeSound() {
 		System.out.println("Quack, quack");
 	}
+
+	@Override
+	public boolean makeSound(String sound) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }

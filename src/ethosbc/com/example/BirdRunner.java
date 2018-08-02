@@ -9,7 +9,12 @@ public class BirdRunner {
 		
 		Duck duck = new Duck();
 		duck.makeSound();
+		
 		Chicken chicken = new Chicken();
 		chicken.makeSound();
+		
+		Chicken rooster = new Chicken();
+		rooster.setGender("Male");
+		rooster.makeSound("Cock-a-doodle-doo");
 	}
 }
