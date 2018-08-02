@@ -6,5 +6,10 @@ public class BirdRunner {
 		bird.doAction("I am walking.");
 		bird.doAction("I am flying.");
 		bird.doAction("I am singing.");
+		
+		Duck duck = new Duck();
+		duck.makeSound();
+		Chicken chicken = new Chicken();
+		chicken.makeSound();
 	}
 }
