@@ -6,6 +6,11 @@ public class Animal {
 	private String size;
 	private String color;
 
+	private boolean canFly;
+	private boolean canWalk;
+	private boolean canSing;
+	private boolean canSwim;
+
 	public boolean doAction(String action) {
 		boolean ret = false;
 		if (null != action && !action.isEmpty()) {
@@ -27,7 +32,7 @@ public class Animal {
 		}
 		return ret;
 	}
-	
+
 	public void feed() {
 		System.out.println("I am feeding.");
 	}
@@ -62,5 +67,37 @@ public class Animal {
 
 	public void setColor(String color) {
 		this.color = color;
+	}
+
+	public boolean canFly() {
+		return canFly;
+	}
+
+	public void setCanFly(boolean canFly) {
+		this.canFly = canFly;
+	}
+
+	public boolean canWalk() {
+		return canWalk;
+	}
+
+	public void setCanWalk(boolean canWalk) {
+		this.canWalk = canWalk;
+	}
+
+	public boolean canSing() {
+		return canSing;
+	}
+
+	public void setCanSing(boolean canSing) {
+		this.canSing = canSing;
+	}
+
+	public boolean canSwim() {
+		return canSwim;
+	}
+
+	public void setCanSwim(boolean canSwim) {
+		this.canSwim = canSwim;
 	}
 }
