@@ -1,6 +1,7 @@
 package ethosbc.com.example;
 
 public class AnimalRunner {
+	
 	public static void main(String[] args) {
 		Bird bird = new Bird();
 		bird.doAction("I am walking.");
@@ -8,29 +9,29 @@ public class AnimalRunner {
 		bird.doAction("I am singing.");
 		bird.setCanFly(true);
 		bird.setCanWalk(true);
-		
+
 		Duck duck = new Duck();
 		duck.makeSound();
 		duck.setCanFly(true);
 		duck.setCanWalk(true);
-		
+
 		Chicken chicken = new Chicken();
 		chicken.makeSound();
 		chicken.setCanFly(true);
 		chicken.setCanWalk(true);
-		
+
 		Chicken rooster = new Chicken();
 		rooster.setGender("Male");
 		rooster.makeSound("Cock-a-doodle-doo");
 		rooster.setCanFly(true);
 		rooster.setCanWalk(true);
-		
+
 		Parrot parrot = new Parrot();
 		parrot.setCompanion(new Dog());
-		parrot.makeSound( parrot.getCompanion() );
+		parrot.makeSound(parrot.getCompanion());
 		parrot.setCanFly(true);
 		parrot.setCanWalk(true);
-		
+
 		Fish fish = new Fish();
 		fish.doAction("I am swimming.");
 		fish.setCanSwim(true);
@@ -52,35 +53,40 @@ public class AnimalRunner {
 		Dolphin dolphin = new Dolphin();
 		dolphin.swim();
 		dolphin.setCanSwim(true);
-		
+
+		Caterpillar caterpillar = new Caterpillar();
+		caterpillar.setCanWalk(true);
+		Butterfly morphedButterfly = caterpillar.morph();
+		morphedButterfly.fly();
+
 		Butterfly butterfly = new Butterfly();
 		butterfly.setCanFly(true);
 		butterfly.fly();
-		
+
 		Dog dog = new Dog();
 		dog.makeSound();
 		dog.setCanWalk(true);
 		dog.setCanSwim(true);
-		
+
 		Cat cat = new Cat();
 		cat.makeSound();
 		cat.setCanWalk(true);
 		cat.setCanSwim(true);
-		
+
 		Animal[] animals = new Animal[] { 
-			bird, 
-			duck, 
-			chicken, 
-			parrot, 
-			fish, 
-			shark, 
-			clownFish, 
-			dolphin, 
-			dog,
-			butterfly,
-			cat 
+				bird, 
+				duck, 
+				chicken, 
+				parrot, 
+				fish, 
+				shark, 
+				clownFish, 
+				dolphin, 
+				dog, 
+				butterfly,
+				cat 
 		};
-		
+
 		int canFlyCtr = 0, canWalkCtr = 0, canSingCtr = 0, canSwimCtr = 0;
 		for (Animal animal : animals) {
 			if (animal.canFly()) ++canFlyCtr;
@@ -88,11 +94,11 @@ public class AnimalRunner {
 			if (animal.canSing()) ++canSingCtr;
 			if (animal.canSwim()) ++canSwimCtr;
 		}
-		
+
 		System.out.println("\nStats: \n" 
-				+ "Can Fly: " + canFlyCtr + "\n" 
-				+ "Can Walk: " + canWalkCtr + "\n"
-				+ "Can Sing: " + canSingCtr + "\n" 
-				+ "Can Swim: " + canSwimCtr + "\n");
+		+ "Can Fly: " + canFlyCtr 
+		+ "\n" + "Can Walk: " + canWalkCtr 
+		+ "\n" + "Can Sing: " + canSingCtr 
+		+ "\n" + "Can Swim: " + canSwimCtr + "\n");
 	}
 }
