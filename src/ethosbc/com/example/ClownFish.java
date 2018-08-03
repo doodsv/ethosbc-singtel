@@ -23,8 +23,7 @@ public class ClownFish extends Fish implements IAnimalBehavior, IClownFishBehavi
 
 	@Override
 	public void doJoke() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("I am joking.");
 	}
 
 }

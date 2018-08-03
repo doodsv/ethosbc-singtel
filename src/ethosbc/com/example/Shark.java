@@ -23,7 +23,12 @@ public class Shark extends Fish implements IAnimalBehavior, ISharkBehavior {
 
 	@Override
 	public boolean feed(Animal prey) {
-		// TODO Auto-generated method stub
-		return false;
+		boolean ret = false;
+		//it wouldn't make sense for a Shark to feed on Animals not in the sea
+		if (null != prey && prey instanceof Fish) {
+			System.out.println("Shark is feeding on " + prey.getClass().getSimpleName() + " - " + prey.getName());
+			ret = true;
+		}
+		return ret;
 	}
 }

@@ -12,8 +12,12 @@ public class FishRunner {
 		ClownFish clownFish = new ClownFish();
 		clownFish.setSize("small");
 		clownFish.setColor("orange");
+		clownFish.setName("Nemo");
 		
 		shark.feed( clownFish );
 		clownFish.doJoke();
+		
+		Dolphin dolphin = new Dolphin();
+		dolphin.swim();
 	}
 }
