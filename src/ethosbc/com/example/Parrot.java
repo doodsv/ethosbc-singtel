@@ -1,9 +1,6 @@
 package ethosbc.com.example;
 
-import ethosbc.com.example.interfaces.IAnimalBehavior;
-import ethosbc.com.example.interfaces.IParrotBehavior;
-
-public class Parrot extends Bird implements IAnimalBehavior, IParrotBehavior {
+public class Parrot extends Bird {
 
 	private Animal companion;
 
@@ -15,23 +12,6 @@ public class Parrot extends Bird implements IAnimalBehavior, IParrotBehavior {
 		this.companion = companion;
 	}
 
-	@Override
-	public void makeSound() {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public boolean makeSound(String sound) {
-        boolean ret = false;
-        if (null != sound && !sound.isEmpty()) {
-            System.out.println(sound);
-            ret = true;
-        }
-        return ret;
-	}
-
-	@Override
 	public boolean makeSound(Animal companion) {
 		boolean ret = false;
 		if (null != companion) {

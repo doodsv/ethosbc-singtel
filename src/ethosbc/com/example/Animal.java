@@ -5,7 +5,33 @@ public class Animal {
 	private String gender;
 	private String size;
 	private String color;
+
+	public boolean doAction(String action) {
+		boolean ret = false;
+		if (null != action && !action.isEmpty()) {
+			System.out.println(action);
+			ret = true;
+		}
+		return ret;
+	}
+
+	public void makeSound() {
+		System.out.println("Default animal sound.");
+	}
+
+	public boolean makeSound(String sound) {
+		boolean ret = false;
+		if (null != sound && !sound.isEmpty()) {
+			System.out.println(sound);
+			ret = true;
+		}
+		return ret;
+	}
 	
+	public void feed() {
+		System.out.println("I am feeding.");
+	}
+
 	public String getName() {
 		return name;
 	}
@@ -21,6 +47,7 @@ public class Animal {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
+
 	public String getSize() {
 		return size;
 	}
@@ -28,7 +55,7 @@ public class Animal {
 	public void setSize(String size) {
 		this.size = size;
 	}
-	
+
 	public String getColor() {
 		return color;
 	}

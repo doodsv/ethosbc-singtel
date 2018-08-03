@@ -1,28 +1,18 @@
 package ethosbc.com.example;
 
-import ethosbc.com.example.interfaces.IAnimalBehavior;
-
-public class Fish extends Animal implements IAnimalBehavior {
+public class Fish extends Animal {
 	
 	private int finSpan;
+	
+	public void swim() {
+		System.out.println("I am swimming.");
+	}
 
 	public int getFinSpan() {
 		return finSpan;
 	}
-
-	@Override
-	public boolean doAction(String action) {
-		boolean ret = false;
-		if (null != action && !action.isEmpty()) {
-			System.out.println(action);
-			ret = true;
-		}
-		return ret;
-	}
-
-	@Override
-	public void feed() {
-		// TODO Auto-generated method stub
-		
+	
+	public void setFinSpan(int finSpan) {
+		this.finSpan = finSpan;
 	}
 }
