@@ -7,5 +7,10 @@ public class Cat extends Animal {
 	public int getWhiskerLength() {
 		return whiskerLength;
 	}
+	
+	@Override
+	public void makeSound() {
+        System.out.println("Meow, meow");
+	}
 
 }
