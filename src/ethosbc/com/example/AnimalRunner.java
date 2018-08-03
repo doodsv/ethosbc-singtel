@@ -53,6 +53,10 @@ public class AnimalRunner {
 		dolphin.swim();
 		dolphin.setCanSwim(true);
 		
+		Butterfly butterfly = new Butterfly();
+		butterfly.setCanFly(true);
+		butterfly.fly();
+		
 		Dog dog = new Dog();
 		dog.makeSound();
 		dog.setCanWalk(true);
@@ -73,7 +77,7 @@ public class AnimalRunner {
 			clownFish, 
 			dolphin, 
 			dog,
-			// new Butterfly(),
+			butterfly,
 			cat 
 		};
 		
